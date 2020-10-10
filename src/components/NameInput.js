@@ -39,7 +39,7 @@ export default function NameInput() {
             style={{
               color: '#efeeee',
               textAlign: 'center',
-              fontWeight: 300,
+              fontWeight: 100,
               fontSize: '3rem',
               marginBottom: 40,
               userSelect: 'none',
@@ -69,7 +69,7 @@ export default function NameInput() {
           style={{
             color: '#efeeee',
             textAlign: 'center',
-            fontWeight: 300,
+            fontWeight: 100,
             fontSize: '3rem',
             marginBottom: 40,
             verticalAlign: 'middle',
