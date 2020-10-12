@@ -66,11 +66,11 @@ function AddButton(props) {
     }
     if (title.trim() === '') {
       addShortcut(
-        url.trim(),
+        url.trim().replace('https://', '').replace('http://', ''),
         url.trim().replace('https://', '').replace('http://', '').replace('www.', '').split('.')[0]
       );
     } else {
-      addShortcut(url.trim(), title.trim());
+      addShortcut(url.trim().replace('https://', '').replace('http://', ''), title.trim());
     }
     setUrl('');
     setTitle('');

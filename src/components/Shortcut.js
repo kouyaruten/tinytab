@@ -42,7 +42,7 @@ export default function Shortcut(props) {
             }}
           >
             <img src={`https://www.google.com/s2/favicons?sz=256&domain=${url}`} style={{ width: 40 }} />
-            <p style={{ textTransform: 'capitalize', fontSize: 'larger' }}>{title}</p>
+            <p style={{ textTransform: 'capitalize', fontSize: 16 }}>{title}</p>
           </div>
         </div>
       </a>

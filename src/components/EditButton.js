@@ -67,11 +67,11 @@ function EditButton(props) {
     if (myTitle === '' || myTitle.trim() === '') {
       editShortcut(
         id,
-        myUrl.trim(),
+        myUrl.trim().replace('https://', '').replace('http://', ''),
         url.trim().replace('https://', '').replace('http://', '').replace('www.', '').split('.')[0]
       );
     } else {
-      editShortcut(id, myUrl.trim(), myTitle.trim());
+      editShortcut(id, myUrl.trim().replace('https://', '').replace('http://', ''), myTitle.trim());
     }
 
     handleClose();
