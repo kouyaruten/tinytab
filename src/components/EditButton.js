@@ -87,7 +87,13 @@ function EditButton(props) {
       <IconButton
         aria-label="more"
         onClick={handleClickOpen}
-        style={{ color: 'white', opacity: '0.1', zIndex: 1000, marginLeft: -48 }}
+        style={{
+          color: 'white',
+          opacity: hover ? 0.6 : 0.1,
+          zIndex: 1000,
+          marginRight: -12,
+          transition: 'opacity 0.2s ease-in-out',
+        }}
       >
         <MoreVertIcon />
       </IconButton>

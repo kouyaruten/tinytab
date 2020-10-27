@@ -7,6 +7,7 @@ import NameInput from './NameInput';
 import Shortcuts from './Shortcuts';
 import AddButton from './AddButton';
 import EditButton from './EditButton';
+import { DragDropContext } from 'react-beautiful-dnd';
 
 const Container = styled.div`
   height: 100vh;
@@ -87,12 +88,16 @@ const App = () => {
     setList(newList);
   };
 
+  const onDragEnd = () => {};
+
   return (
     <Container>
       <BackgroundImage />
       <SearchBar />
       <NameInput />
-      <Shortcuts list={list} editShortcut={editShortcut} deleteShortcut={deleteShortcut} />
+      <DragDropContext onDragEnd={onDragEnd}>
+        <Shortcuts list={list} editShortcut={editShortcut} deleteShortcut={deleteShortcut} />
+      </DragDropContext>
       <div style={{ display: 'flex', marginTop: '2rem' }}>
         <AddButton addShortcut={addShortcut} />
       </div>
