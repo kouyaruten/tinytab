@@ -37,7 +37,7 @@ const styles = {
   },
 };
 function EditButton(props) {
-  const { classes, id, url, title, editShortcut, deleteShortcut, hover } = props;
+  const { classes, id, url, title, editShortcut, deleteShortcut, hover, toggleHover } = props;
   const [open, setOpen] = React.useState(false);
   const [myUrl, setMyUrl] = useState(url);
   const [myTitle, setMyTitle] = useState(title);
@@ -49,6 +49,7 @@ function EditButton(props) {
 
   const handleClose = (value) => {
     setOpen(false);
+    toggleHover();
   };
 
   const handleUrlChange = (e) => {
@@ -83,7 +84,7 @@ function EditButton(props) {
   };
 
   return (
-    <div style={{ opacity: 1 }}>
+    <div>
       <IconButton
         aria-label="more"
         onClick={handleClickOpen}

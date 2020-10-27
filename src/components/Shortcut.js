@@ -55,20 +55,6 @@ export default function Shortcut(props) {
   };
 
   return (
-    // <Container onClick={() => (window.location.href = `https://${url}`)}>
-    //   <img src={`https://www.google.com/s2/favicons?sz=256&domain=${url}`} style={{ width: 30, marginTop: 5 }} />
-    //   <p style={{ textTransform: 'capitalize', fontSize: 16 }}>
-    //     {title.length <= 12 ? title : title.substring(0, 10) + '...'}
-    //   </p>
-    //   <EditButton
-    //     hover={hover}
-    //     url={url}
-    //     title={title}
-    //     id={id}
-    //     editShortcut={editShortcut}
-    //     deleteShortcut={deleteShortcut}
-    //   />
-    // </Container>
     <Card className={classes.root} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <CardHeader
         action={
@@ -79,6 +65,7 @@ export default function Shortcut(props) {
             id={id}
             editShortcut={editShortcut}
             deleteShortcut={deleteShortcut}
+            toggleHover={handleMouseLeave}
           />
         }
       />
