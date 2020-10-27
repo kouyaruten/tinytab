@@ -41,8 +41,10 @@ export default function Shortcut(props) {
               justifyContent: 'center',
             }}
           >
-            <img src={`https://www.google.com/s2/favicons?sz=256&domain=${url}`} style={{ width: 40 }} />
-            <p style={{ textTransform: 'capitalize', fontSize: 16 }}>{title}</p>
+            <img src={`https://www.google.com/s2/favicons?sz=256&domain=${url}`} style={{ width: 30, marginTop: 10 }} />
+            <p style={{ textTransform: 'capitalize', fontSize: 16 }}>
+              {title.length <= 10 ? title : title.substring(0, 10) + '...'}
+            </p>
           </div>
         </div>
       </a>

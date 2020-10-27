@@ -50,9 +50,6 @@ function AddButton(props) {
 
   const handleUrlChange = (e) => {
     setUrl(e.target.value);
-    // console.log(
-    //   'https://www.github.com/'.replace('https://', '').replace('http://', '').replace('www.', '').split('.')[0]
-    // );
   };
 
   const handleTitleChange = (e) => {

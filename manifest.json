@@ -1,0 +1,14 @@
+{
+  "short_name": "Tinytab",
+  "name": "Tinytab",
+  "manifest_version": 2,
+  "icons": {
+    "192": "logo192.png",
+    "512": "logo512.png"
+  },
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "version": "1.0",
+  "content_security_policy": "script-src 'self' 'sha256-tDiFamrAwQQo9e5t88oOpUOZ8BiPosswsblJID2trSM='; object-src 'self'"
+}
