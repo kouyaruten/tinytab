@@ -64,12 +64,7 @@ export default function Shortcut(props) {
           {...provided.dragHandleProps}
           isDragging={snapshot.isDragging}
         >
-          <Card
-            isDragging={snapshot.isDragging}
-            className={classes.root}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-          >
+          <Card className={classes.root} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <CardHeader
               action={
                 <EditButton

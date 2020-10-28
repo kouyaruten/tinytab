@@ -22,32 +22,32 @@ const Container = styled.div`
 
 const initialList = [
   {
-    id: 1,
+    id: uuid(),
     title: 'Gmail',
     url: 'mail.google.com',
   },
   {
-    id: 2,
+    id: uuid(),
     title: 'Calendar',
     url: 'calendar.google.com',
   },
   {
-    id: 3,
+    id: uuid(),
     title: 'Youtube',
     url: 'youtube.com',
   },
   {
-    id: 4,
+    id: uuid(),
     title: 'Amazon',
     url: 'amazon.com/',
   },
   {
-    id: 5,
+    id: uuid(),
     title: 'LinkedIn',
     url: 'linkedin.com',
   },
   {
-    id: 6,
+    id: uuid(),
     title: 'GitHub',
     url: 'github.com',
   },
@@ -95,8 +95,6 @@ const App = () => {
     const newList = [...list];
     const newItem = newList.splice(source.index, 1)[0];
 
-    console.log(newList);
-    console.log(newItem);
     newList.splice(destination.index, 0, newItem);
     window.localStorage.setItem('shortcuts', JSON.stringify(newList));
     setList(newList);
