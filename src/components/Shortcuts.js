@@ -5,13 +5,11 @@ import { Droppable } from 'react-beautiful-dnd';
 export default function Shortcuts(props) {
   const { list, editShortcut, deleteShortcut } = props;
 
-  const onDragEnd = (result) => {};
-
   return (
-    <Droppable droppableId={1}>
+    <Droppable droppableId={'all-shortcuts'} direction="horizontal" style={{ transform: 'none' }}>
       {(provided) => (
         <div
-          innerRef={provided.innerRef}
+          ref={provided.innerRef}
           {...provided.droppableProps}
           style={{ display: 'flex', flexDirection: 'row', marginTop: -60 }}
         >

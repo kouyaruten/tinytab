@@ -88,7 +88,19 @@ const App = () => {
     setList(newList);
   };
 
-  const onDragEnd = () => {};
+  const onDragEnd = (result) => {
+    const { destination, source, draggableId, type } = result;
+    if (!destination) return;
+    if (destination.droppableId === source.droppableId && destination.index === source.index) return;
+    const newList = [...list];
+    const newItem = newList.splice(source.index, 1)[0];
+
+    console.log(newList);
+    console.log(newItem);
+    newList.splice(destination.index, 0, newItem);
+    window.localStorage.setItem('shortcuts', JSON.stringify(newList));
+    setList(newList);
+  };
 
   return (
     <Container>
