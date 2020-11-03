@@ -8,6 +8,7 @@ import Shortcuts from './Shortcuts';
 import AddButton from './AddButton';
 import EditButton from './EditButton';
 import { DragDropContext } from 'react-beautiful-dnd';
+import AppSwitcher from './AppSwitcher';
 
 const Container = styled.div`
   height: 100vh;
@@ -101,17 +102,20 @@ const App = () => {
   };
 
   return (
-    <Container>
-      <BackgroundImage />
-      <SearchBar />
-      <NameInput />
-      <DragDropContext onDragEnd={onDragEnd}>
-        <Shortcuts list={list} editShortcut={editShortcut} deleteShortcut={deleteShortcut} />
-      </DragDropContext>
-      <div style={{ display: 'flex', marginTop: '2rem' }}>
-        <AddButton addShortcut={addShortcut} />
-      </div>
-    </Container>
+    <>
+      <AppSwitcher />
+      <Container>
+        <BackgroundImage />
+        <SearchBar />
+        <NameInput />
+        <DragDropContext onDragEnd={onDragEnd}>
+          <Shortcuts list={list} editShortcut={editShortcut} deleteShortcut={deleteShortcut} />
+        </DragDropContext>
+        <div style={{ display: 'flex', marginTop: '2rem' }}>
+          <AddButton addShortcut={addShortcut} />
+        </div>
+      </Container>
+    </>
   );
 };
 
