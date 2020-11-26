@@ -1,0 +1,31 @@
+{
+  "short_name": "Tinytab",
+  "name": "Tinytab",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "manifest_version": 2,
+  "icons": {
+    "192": "logo192.png",
+    "512": "logo512.png"
+  },
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "version": "1.2",
+  "content_security_policy": "script-src 'self' 'sha256-tDiFamrAwQQo9e5t88oOpUOZ8BiPosswsblJID2trSM='; object-src 'self'"
+}
