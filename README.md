@@ -1,5 +1,5 @@
 ## Demo
-### https://williamj-in.github.io/tinytab/
+### https://kouyaruten.github.io/tinytab/
 
 ## Download & Usage
 https://chrome.google.com/webstore/detail/tinytab/bmlbibebemncadbgojnhccmmdojblomm?hl=en-US 
