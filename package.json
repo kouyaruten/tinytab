@@ -28,7 +28,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "deploy": "gh-pages -d build -r git@github.com:williamj-in/tiny-start-page.git",
+    "deploy": "gh-pages -d build -r git@github.com:kouyaruten/tiny-start-page.git",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

@@ -49,8 +49,8 @@ const initialList = [
   },
   {
     id: uuid(),
-    title: 'GitHub',
-    url: 'github.com',
+    title: 'Bing',
+    url: 'bing.com',
   },
 ];
 
