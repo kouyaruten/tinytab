@@ -40,7 +40,7 @@ form {
 }
 
 a {
-  opacity: 0.7;
+  /* opacity: 0.8; */
   color: #efeeee;
   text-decoration: none;
   margin-right: 0.5rem;
@@ -49,8 +49,7 @@ a {
 }
 
 a:hover {
-  /* box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.4); */
-  opacity: 0.9;
+  /* opacity: 1; */
 }
 
 .MuiPaper-root {

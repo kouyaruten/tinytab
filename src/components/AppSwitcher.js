@@ -59,62 +59,86 @@ export default function AppSwitcher() {
         onClose={handleClose}
       >
         <Grid container spacing={0} className={classes.container}>
-          <Grid item xs={4} onClick={() => (window.location.href = 'https://myaccount.google.com')}>
-            <MenuItem className={classes.menuItem} onClick={handleClose}>
-              <img src="./imgs/009-account.svg" className={classes.img} />
-              Account
-            </MenuItem>
+
+          <Grid item xs={4} style={{ height: '12vh' }}>
+            <a href='https://myaccount.google.com'>
+              <MenuItem className={classes.menuItem} onClick={handleClose}>
+                <img src="./imgs/009-account.svg" className={classes.img} />
+                Account
+              </MenuItem>
+            </a>
           </Grid>
-          <Grid item xs={4} onClick={() => (window.location.href = 'https://mail.google.com')}>
-            <MenuItem className={classes.menuItem} onClick={handleClose}>
-              <img src="./imgs/014-gmail.svg" className={classes.img} />
-              Mail
-            </MenuItem>
+
+
+          <Grid item xs={4} style={{ height: '12vh' }}>
+            <a href='https://mail.google.com'>
+              <MenuItem className={classes.menuItem} onClick={handleClose}>
+                <img src="./imgs/014-gmail.svg" className={classes.img} />
+                Mail
+              </MenuItem>
+            </a>
           </Grid>
-          <Grid item xs={4} onClick={() => (window.location.href = 'https://calendar.google.com')}>
-            <MenuItem className={classes.menuItem} onClick={handleClose}>
-              <img src="./imgs/015-calendar.svg" className={classes.img} />
-              Calendar
-            </MenuItem>
+
+
+          <Grid item xs={4} style={{ height: '12vh' }}>
+            < a href='https://calendar.google.com'>
+              <MenuItem className={classes.menuItem} onClick={handleClose}>
+                <img src="./imgs/015-calendar.svg" className={classes.img} />
+                Calendar
+              </MenuItem>
+            </a>
           </Grid>
-          <Grid item xs={4} onClick={() => (window.location.href = 'https://docs.google.com/document')}>
-            <MenuItem className={classes.menuItem} onClick={handleClose}>
-              <img src="./imgs/005-docs.svg" className={classes.img} />
-              Docs
-            </MenuItem>
+
+          <Grid item xs={4} style={{ height: '12vh' }}>
+            <a href='https://docs.google.com/document'>
+              <MenuItem className={classes.menuItem} onClick={handleClose}>
+                <img src="./imgs/005-docs.svg" className={classes.img} />
+                Docs
+              </MenuItem>
+            </a>
           </Grid>
-          <Grid item xs={4} onClick={() => (window.location.href = 'https://docs.google.com/spreadsheets')}>
-            <MenuItem className={classes.menuItem} onClick={handleClose}>
-              <img src="./imgs/006-sheets.svg" className={classes.img} />
-              Sheets
-            </MenuItem>
+          <Grid item xs={4} style={{ height: '12vh' }}>
+            <a href='https://docs.google.com/spreadsheets'>
+              <MenuItem className={classes.menuItem} onClick={handleClose}>
+                <img src="./imgs/006-sheets.svg" className={classes.img} />
+                Sheets
+              </MenuItem>
+            </a>
           </Grid>
-          <Grid item xs={4} onClick={() => (window.location.href = 'https://docs.google.com/presentation')}>
-            <MenuItem className={classes.menuItem} onClick={handleClose}>
-              <img src="./imgs/007-slides.svg" className={classes.img} />
-              Slides
-            </MenuItem>
+          <Grid item xs={4} style={{ height: '12vh' }}>
+            <a href='https://docs.google.com/presentation'>
+              <MenuItem className={classes.menuItem} onClick={handleClose}>
+                <img src="./imgs/007-slides.svg" className={classes.img} />
+                Slides
+              </MenuItem>
+            </a>
           </Grid>
-          <Grid item xs={4} onClick={() => (window.location.href = 'https://drive.google.com/')}>
-            <MenuItem className={classes.menuItem} onClick={handleClose}>
-              <img src="./imgs/016-drive.svg" className={classes.img} />
-              Drive
-            </MenuItem>
+          <Grid item xs={4} >
+            <a href='https://drive.google.com'>
+              <MenuItem className={classes.menuItem} onClick={handleClose}>
+                <img src="./imgs/016-drive.svg" className={classes.img} />
+                Drive
+              </MenuItem>
+            </a>
           </Grid>
-          <Grid item xs={4} onClick={() => (window.location.href = 'https://google.com/maps')}>
-            <MenuItem className={classes.menuItem} onClick={handleClose}>
-              <img src="./imgs/001-google maps.svg" className={classes.img} />
-              Maps
-            </MenuItem>
+          <Grid item xs={4} >
+            <a href='https://google.com/maps'>
+              <MenuItem className={classes.menuItem} onClick={handleClose}>
+                <img src="./imgs/001-google maps.svg" className={classes.img} />
+                Maps
+              </MenuItem>
+            </a>
           </Grid>
-          <Grid item xs={4} onClick={() => (window.location.href = 'https://translate.google.com')}>
-            <MenuItem className={classes.menuItem} onClick={handleClose}>
-              <img src="./imgs/004-translate.svg" className={classes.img} />
-              Translate
-            </MenuItem>
+          <Grid item xs={4} >
+            <a href='https://translate.google.com'>
+              <MenuItem className={classes.menuItem} onClick={handleClose}>
+                <img src="./imgs/004-translate.svg" className={classes.img} />
+                Translate
+              </MenuItem>
+            </a>
           </Grid>
         </Grid>
       </Menu>
-    </div>
+    </div >
   );
 }

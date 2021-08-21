@@ -56,51 +56,52 @@ export default function Shortcut(props) {
   };
 
   return (
-    <Draggable draggableId={id} index={index}>
-      {(provided, snapshot) => (
-        <Container
-          {...provided.draggableProps}
-          ref={provided.innerRef}
-          {...provided.dragHandleProps}
-          isDragging={snapshot.isDragging}
-        >
-          <Card className={classes.root} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-            <CardHeader
-              action={
-                <EditButton
-                  hover={hover}
-                  url={url}
-                  title={title}
-                  id={id}
-                  editShortcut={editShortcut}
-                  deleteShortcut={deleteShortcut}
-                  toggleHover={handleMouseLeave}
-                />
-              }
-            />
-            <CardContent
-              onClick={() => (window.location.href = `https://${url}`)}
-              style={{
-                marginTop: -50,
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'center',
-                marginBottom: -10,
-                cursor: 'pointer',
-              }}
-            >
-              <img
-                src={`https://www.google.com/s2/favicons?sz=256&domain=${url}`}
-                style={{ width: 30, marginTop: 5 }}
+    <a href={`https://${url}`}>
+      <Draggable draggableId={id} index={index}>
+        {(provided, snapshot) => (
+          <Container
+            {...provided.draggableProps}
+            ref={provided.innerRef}
+            {...provided.dragHandleProps}
+            isDragging={snapshot.isDragging}
+          >
+            <Card className={classes.root} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+              <CardHeader
+                action={
+                  <EditButton
+                    hover={hover}
+                    url={url}
+                    title={title}
+                    id={id}
+                    editShortcut={editShortcut}
+                    deleteShortcut={deleteShortcut}
+                    toggleHover={handleMouseLeave}
+                  />
+                }
               />
-              <p style={{ textTransform: 'capitalize', fontSize: 16, textAlign: 'center' }}>
-                {title.length <= 12 ? title : title.substring(0, 10) + '...'}
-              </p>
-            </CardContent>
-          </Card>
-        </Container>
-      )}
-    </Draggable>
+              <CardContent
+                style={{
+                  marginTop: -50,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  marginBottom: -10,
+                  cursor: 'pointer',
+                }}
+              >
+                <img
+                  src={`https://${url}/favicon.ico`}
+                  style={{ width: 30, marginTop: 5 }}
+                />
+                <p style={{ textTransform: 'capitalize', fontSize: 16, textAlign: 'center' }}>
+                  {title.length <= 12 ? title : title.substring(0, 10) + '...'}
+                </p>
+              </CardContent>
+            </Card>
+          </Container>
+        )}
+      </Draggable>
+    </a>
   );
 }

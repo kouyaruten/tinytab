@@ -29,13 +29,13 @@ const initialList = [
   },
   {
     id: uuid(),
-    title: 'Calendar',
-    url: 'calendar.google.com',
+    title: 'Baidu',
+    url: 'baidu.com',
   },
   {
     id: uuid(),
-    title: 'Youtube',
-    url: 'youtube.com',
+    title: 'Bilibili',
+    url: 'bilibili.com',
   },
   {
     id: uuid(),
@@ -44,8 +44,8 @@ const initialList = [
   },
   {
     id: uuid(),
-    title: 'LinkedIn',
-    url: 'linkedin.com',
+    title: 'Github',
+    url: 'github.com',
   },
   {
     id: uuid(),

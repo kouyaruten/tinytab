@@ -79,7 +79,7 @@ export default function NameInput() {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          Hello, {name}!
+          Hello, {name}.
           <IconButton aria-label="edit" onClick={handleOpenForm} style={{ marginLeft: '1rem' }}>
             <EditOutlinedIcon
               style={{ color: '#efeeee', opacity: hover ? 0.8 : 0, transition: 'opacity 0.2s ease-in-out' }}
