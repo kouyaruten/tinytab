@@ -55,6 +55,7 @@ export default function Shortcut(props) {
     setHover(false);
   };
 
+
   return (
     <a href={`https://${url}`}>
       <Draggable draggableId={id} index={index}>

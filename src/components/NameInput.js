@@ -8,6 +8,21 @@ export default function NameInput() {
   const [editing, setEditing] = useState(name === '');
   const [hover, setHover] = useState(false);
 
+  const [date, setDate] = useState(new Date());
+
+  const hour = date.getHours();
+  const min = String(date.getMinutes()).padStart(2, '0');
+
+  useEffect(() => {
+    const tick = () => setDate(new Date());
+
+    const timerId = setTimeout(tick, 1000);
+
+    // 返回一个清除函数， 清除函数会在组件卸载前执行，执行当前effect前对上一个effect进行清除
+
+    return () => clearTimeout(timerId);
+  }, [date]);
+
   const handleMouseEnter = () => {
     setHover(true);
   };
@@ -30,6 +45,26 @@ export default function NameInput() {
   const handleOpenForm = () => {
     setEditing(true);
   };
+
+  const getGreeting = (hour) => {
+
+
+
+    if (6 <= hour < 12)
+      return "上午好";
+
+    else if (12 <= hour < 14)
+      return "中午好";
+
+    else if (14 <= hour < 18)
+      return "下午好";
+
+    else
+      return "晚上好";
+
+
+
+  }
 
   return (
     <div style={{ width: '40%', zIndex: 1, marginBottom: 100 }}>
@@ -79,7 +114,7 @@ export default function NameInput() {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          Hello, {name}.
+          {getGreeting(hour)}, {name}.
           <IconButton aria-label="edit" onClick={handleOpenForm} style={{ marginLeft: '1rem' }}>
             <EditOutlinedIcon
               style={{ color: '#efeeee', opacity: hover ? 0.8 : 0, transition: 'opacity 0.2s ease-in-out' }}
