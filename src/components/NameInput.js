@@ -12,6 +12,7 @@ export default function NameInput() {
 
   const hour = date.getHours();
   const min = String(date.getMinutes()).padStart(2, '0');
+  const greeting = (6 <= hour && hour < 10) ? "早安" : (10 <= hour && hour < 12) ? "上午好" : (12 <= hour && hour < 14) ? "午安" : (14 <= hour && hour < 18) ? "下午好" : (18 <= hour && hour < 22) ? "晚上好" : "晚安"
 
   useEffect(() => {
     const tick = () => setDate(new Date());
@@ -45,26 +46,6 @@ export default function NameInput() {
   const handleOpenForm = () => {
     setEditing(true);
   };
-
-  const getGreeting = (hour) => {
-
-
-
-    if (6 <= hour < 12)
-      return "上午好";
-
-    else if (12 <= hour < 14)
-      return "中午好";
-
-    else if (14 <= hour < 18)
-      return "下午好";
-
-    else
-      return "晚上好";
-
-
-
-  }
 
   return (
     <div style={{ width: '40%', zIndex: 1, marginBottom: 100 }}>
@@ -114,7 +95,7 @@ export default function NameInput() {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          {getGreeting(hour)}, {name}.
+          {greeting}, {name}.
           <IconButton aria-label="edit" onClick={handleOpenForm} style={{ marginLeft: '1rem' }}>
             <EditOutlinedIcon
               style={{ color: '#efeeee', opacity: hover ? 0.8 : 0, transition: 'opacity 0.2s ease-in-out' }}
